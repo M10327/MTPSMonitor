@@ -1,2 +1,2 @@
 # MTPSMonitor
-A simple unturned plugin that frequently checks server tps and prints to console if it is below a certain threshold. Check frequency and tps threshold are configurable. (Check frequency is in milliseconds)
+A simple unturned plugin that frequently checks server tps/ups and prints to console if it is below a certain threshold. Check frequency and tps/ups threshold are configurable, set to -1 to disable. The check frequency is in milliseconds.

@@ -23,9 +23,13 @@ namespace MTPSMonitor
         private void OnTimedEvent(object sender, ElapsedEventArgs e)
         {
             if (!Level.isLoaded) return;
-            if (Provider.debugTPS <= Configuration.Instance.WarnThreshhold)
+            if (Configuration.Instance.TPSWarnThreshhold != -1 && Provider.debugTPS <= Configuration.Instance.TPSWarnThreshhold)
             {
                 Rocket.Core.Logging.Logger.LogWarning($"TPS Drop detected. Current TPS: {Provider.debugTPS}");
+            }
+            if (Configuration.Instance.UPSWarnThreshold != -1 && Provider.debugUPS <= Configuration.Instance.UPSWarnThreshold)
+            {
+                Rocket.Core.Logging.Logger.LogWarning($"UPS Drop detected. Current UPS: {Provider.debugUPS}");
             }
         }
 

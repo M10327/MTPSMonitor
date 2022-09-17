@@ -10,11 +10,13 @@ namespace MTPSMonitor
     public class config : IRocketPluginConfiguration
     {
         public int DelayBetweenChecks;
-        public int WarnThreshhold;
+        public int TPSWarnThreshhold;
+        public int UPSWarnThreshold;
         public void LoadDefaults()
         {
             DelayBetweenChecks = 500;
-            WarnThreshhold = 45;
+            TPSWarnThreshhold = 45;
+            UPSWarnThreshold = 55;
         }
     }
 }
